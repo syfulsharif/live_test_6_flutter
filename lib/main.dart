@@ -19,12 +19,19 @@ class MyApp extends StatelessWidget {
 class HomeActivity extends StatelessWidget {
   const HomeActivity({Key? key}) : super(key: key);
 
+  mySnackbar(message, context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
+          IconButton(onPressed: () {mySnackbar('Cart is empty', context);}, icon: Icon(Icons.shopping_cart)),
+          
         ],
         title: Text('My Shopping List'),
         centerTitle: true,
@@ -35,12 +42,20 @@ class HomeActivity extends StatelessWidget {
 }
 
 class ShoppingItems extends StatelessWidget {
-  const ShoppingItems({Key? key}) : super(key: key);
-
+  ShoppingItems({Key? key}) : super(key: key);
+  List items = ["Apples", "Bananas", "Bread", "Milk", "Eggs"];
   @override
   Widget build(BuildContext context) {
-    return ListView(
-
+    return Container(
+      child: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: Icon(Icons.shopping_bag),
+            title: Text(items[index]),
+          );
+        },
+      ),
     );
   }
 }
