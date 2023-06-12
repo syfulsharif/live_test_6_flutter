@@ -3,14 +3,8 @@
 Ostad Live Test 6
 
 ## Getting Started
+![submission app](https://github.com/syfulsharif/live_test_6_flutter/assets/2669892/024d1d7c-8699-44db-9199-9ed36792973b)
 
-This project is a starting point for a Flutter application.
+The above image shows the rendered version of the source code.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
