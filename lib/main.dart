@@ -46,16 +46,17 @@ class ShoppingItems extends StatelessWidget {
   List items = ["Apples", "Bananas", "Bread", "Milk", "Eggs"];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: Icon(Icons.shopping_bag),
-            title: Text(items[index]),
-          );
-        },
-      ),
+    return ListView.builder(
+      itemCount: items.length,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: ListTile(
+            leading: const Icon(Icons.shopping_bag, size: 30.0,),
+            title: Text(items[index], style: TextStyle(fontSize: 20.0),),
+          ),
+        );
+      },
     );
   }
 }
